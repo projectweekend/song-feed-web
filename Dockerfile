@@ -1,12 +1,7 @@
-FROM node
-COPY package.json /src/
-RUN cd /src && npm install
-COPY app.js /src/
-COPY /api/ /src/api/
-COPY /bin/ /src/bin/
-COPY /public/ /src/public/
-COPY /routes/ /src/routes/
-COPY /views/ /src/views/
+FROM python:2.7.9
+COPY requirements.txt /src/
+RUN cd /src && pip install ipython && pip install -r requirements.txt
+COPY server.py /src/
 WORKDIR /src
-CMD ["npm", "start"]
-EXPOSE 3000
+CMD ["gunicorn", "-b", "0.0.0.0:5000", "server:app"]
+EXPOSE 5000
