@@ -1,0 +1,19 @@
+.sidebar {
+    background-color: #81b71a;
+    color: white;
+    text-align: center;
+}
+
+.sidebar a {
+    color: black;
+}
+
+.sidebar .info {
+    margin-top: 150px;
+}
+
+.sidebar .image-wrapper {
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
