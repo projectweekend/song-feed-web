@@ -60,3 +60,5 @@ target/
 # Sublime stuff
 *.sublime-project
 *.sublime-workspace
+
+docker-compose.yml
