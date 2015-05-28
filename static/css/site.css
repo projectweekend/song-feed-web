@@ -17,3 +17,13 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.album {
+    position: relative;
+}
+
+.play-button {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
