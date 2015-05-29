@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="pure-g">
+        {% for item in feed_items %}
+            <article class="album pure-u-md-1-2">
+                <img class="pure-img" src="{{ item.album.images.0.url }}">
+                <div class="play-button">
+                    <iframe src="https://embed.spotify.com/?uri={{ item.track.uri }}" width="100%" height="80" frameborder="0" allowtransparency="true"></iframe>
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+{% endblock %}
